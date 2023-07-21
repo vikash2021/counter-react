@@ -1,5 +1,5 @@
-import "./styles.css";
 import { useState } from "react";
+import "./styles.css";
 
 const App = () => {
   const [inputValue, setInputValue] = useState(1);
@@ -7,31 +7,32 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>Counter</h1>
+      <h1 style={{ textDecoration: "underline" }}>Counter</h1>
       <h1>{counterValue}</h1>
-      <div>
-        <span>Increment/Decrement by:</span>
-        <input
-          onChange={(e) => setInputValue(e.target.value)}
-          type="number"
-          min="1"
-          value={inputValue}
-        />
-      </div>
-      <div>
+      <div style={{ display: "flex", justifyContent: "center", gap: "18px" }}>
         <button
           onClick={() => setCounterValue(counterValue + parseInt(inputValue))}
         >
           +
         </button>
+        <div className="inputWrapper">
+          <span>Increment/Decrement by:</span>
+          <input
+            onChange={(e) => setInputValue(e.target.value)}
+            type="number"
+            min="1"
+            value={inputValue}
+          />
+        </div>
         <button onClick={() => setCounterValue(counterValue - inputValue)}>
           -
         </button>
       </div>
+      <div></div>
       <button
         onClick={() => {
           setCounterValue(0);
-          setInputValue(0);
+          setInputValue(1);
         }}
       >
         Reset
