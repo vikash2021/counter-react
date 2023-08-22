@@ -5,6 +5,8 @@ const App = () => {
   const [inputValue, setInputValue] = useState(1);
   const [counterValue, setCounterValue] = useState(0);
 
+  //just testing my local setup
+
   return (
     <div className="App">
       <h1 style={{ textDecoration: "underline" }}>Counter</h1>
